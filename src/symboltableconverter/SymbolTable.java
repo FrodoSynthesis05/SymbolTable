@@ -38,7 +38,7 @@ public class SymbolTable <Key extends Comparable<Key>, Value> implements Iterabl
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
     public Value get(Key key) {
-        if (key == null) throw new IllegalArgumentException("called get() with null key");
+        if (key == null) throw new IllegalArgumentException("se llamo al metodo get() llave en valor null");
         return st.get(key);
     }
 
@@ -53,7 +53,7 @@ public class SymbolTable <Key extends Comparable<Key>, Value> implements Iterabl
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
     public void put(Key key, Value val) {
-        if (key == null) throw new IllegalArgumentException("called put() with null key");
+        if (key == null) throw new IllegalArgumentException("se llamo al metodo put() llave en valor null");
         if (val == null) st.remove(key);
         else             st.put(key, val);
     }
@@ -68,7 +68,7 @@ public class SymbolTable <Key extends Comparable<Key>, Value> implements Iterabl
      */
     @Deprecated
     public void delete(Key key) {
-        if (key == null) throw new IllegalArgumentException("called delete() with null key");
+        if (key == null) throw new IllegalArgumentException("se llamo al metodo delete() llave en valor null");
         st.remove(key);
     }
 
@@ -80,7 +80,7 @@ public class SymbolTable <Key extends Comparable<Key>, Value> implements Iterabl
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
     public void remove(Key key) {
-        if (key == null) throw new IllegalArgumentException("called remove() with null key");
+        if (key == null) throw new IllegalArgumentException("se llamo al metodo remove() llave en valor null");
         st.remove(key);
     }
 
@@ -93,7 +93,7 @@ public class SymbolTable <Key extends Comparable<Key>, Value> implements Iterabl
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
     public boolean contains(Key key) {
-        if (key == null) throw new IllegalArgumentException("called contains() with null key");
+        if (key == null) throw new IllegalArgumentException("se llamo al metodo contains() llave en valor null");
         return st.containsKey(key);
     }
 
@@ -147,7 +147,7 @@ public class SymbolTable <Key extends Comparable<Key>, Value> implements Iterabl
      * @throws NoSuchElementException if this symbol table is empty
      */
     public Key min() {
-        if (isEmpty()) throw new NoSuchElementException("called min() with empty symbol table");
+        if (isEmpty()) throw new NoSuchElementException("se llamo al metodo get() con tabla de simbolos vacia");
         return st.firstKey();
     }
 
@@ -158,7 +158,7 @@ public class SymbolTable <Key extends Comparable<Key>, Value> implements Iterabl
      * @throws NoSuchElementException if this symbol table is empty
      */
     public Key max() {
-        if (isEmpty()) throw new NoSuchElementException("called max() with empty symbol table");
+        if (isEmpty()) throw new NoSuchElementException("se llamo al metodo max() con tabla de simbolos vacia");
         return st.lastKey();
     }
 
@@ -171,9 +171,9 @@ public class SymbolTable <Key extends Comparable<Key>, Value> implements Iterabl
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
     public Key ceiling(Key key) {
-        if (key == null) throw new IllegalArgumentException("called ceiling() with null key");
+        if (key == null) throw new IllegalArgumentException("se llamo al metodo ceiling() con llave en valor null");
         Key k = st.ceilingKey(key);
-        if (k == null) throw new NoSuchElementException("all keys are less than " + key);
+        if (k == null) throw new NoSuchElementException("todas las llaves so menores que " + key);
         return k;
     }
 
@@ -186,9 +186,9 @@ public class SymbolTable <Key extends Comparable<Key>, Value> implements Iterabl
      * @throws IllegalArgumentException if {@code key} is {@code null}
      */
     public Key floor(Key key) {
-        if (key == null) throw new IllegalArgumentException("called floor() with null key");
+        if (key == null) throw new IllegalArgumentException("se llamo al metodo floor() con llave en valor null");
         Key k = st.floorKey(key);
-        if (k == null) throw new NoSuchElementException("all keys are greater than " + key);
+        if (k == null) throw new NoSuchElementException("todas las llaves son mayores que " + key);
         return k;
     }
 
