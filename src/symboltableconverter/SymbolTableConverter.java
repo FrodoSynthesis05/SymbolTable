@@ -19,8 +19,8 @@ public class SymbolTableConverter {
     public static SymbolTable s = new SymbolTable();
     public static String[] words;
     public static String[] copy = words;
-    public static String result = ""; // SI lees esto funciono bblin
-
+    public static String result = ""; // Si lees esto funciono bblin
+    //Test
     /**
      * @param args the command line arguments
      */
